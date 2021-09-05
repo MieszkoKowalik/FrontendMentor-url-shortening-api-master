@@ -795,13 +795,24 @@ body.header-scrolled-in {
 }
 
 .cta {
-  padding-top: 5.625em;
-  padding-bottom: 5.625em;
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
   background-color: #3b3054;
   background-image: url("../images/bg-boost-desktop.svg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
+}
+@media (min-width: 769px) {
+  .cta {
+    padding-top: 3.5625rem;
+    padding-bottom: 3.5625rem;
+  }
+}
+@media (min-width: 1110px) {
+  .cta {
+    background-size: 100% 100%;
+  }
 }
 .cta-container {
   display: flex;
@@ -818,11 +829,17 @@ body.header-scrolled-in {
   text-align: center;
   color: white;
   font-size: 1.75rem;
+  line-height: 1.714;
 }
 @media (min-width: 769px) {
   .cta__title {
     font-size: clamp(1.75rem, 2.77vw, 2.5rem);
+    line-height: 1.2;
   }
+}
+.cta__button {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .footer {
