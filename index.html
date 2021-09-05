@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="dist/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/css/main.css" />
+
+    <script src="scripts/main.js" type="module"></script>
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <header class="header">
+      <div class="header-container container">
+        <a href="#" class="header__logo">
+          <svg
+            class="header__logo-img"
+            xmlns="http://www.w3.org/2000/svg"
+            width="121"
+            height="33"
+          >
+            <title>Shortly - Home page</title>
+            <use href="dist/images/logo.svg#Logo" />
+          </svg>
+        </a>
+
+        <nav class="header__menu">
+          <button class="hamburger header__hamburger" aria-label="menu" aria-expanded = "false" aria-controls="menu-list">
+            <div class="hamburger__element hamburger__element--top"></div>
+            <div class="hamburger__element hamburger__element--mid"></div>
+            <div class="hamburger__element hamburger__element--bot"></div>
+          </button>
+          <div id="menu-list" class="header__menu-list-container">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Features</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Pricing</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Resources</a>
+              </li>
+            </ul>
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Login</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="button button--round header__menu-button" href="#"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="kv">
+      <div class="kv-container container">
+        <div class="kv__img-container">
+          <img
+            class="kv__img"
+            src="dist/images/illustration-working.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="kv__intro">
+          <h1 class="kv__title">More than just shorter links</h1>
+          <p class="kv__text">
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a href="#" class="kv__button button button--round">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="link-shortener page__link-shortener">
+      <div class="link-shortener-container container">
+        <div class="link-shortener__form-wrapper">
+          <form class="link-shortener__form">
+            <label
+              class="link-shortener__input-label sr-only"
+              for="shorten-link"
+              >Shorten a link here...</label
+            >
+            <div class="link-shortener__input-container">
+              <input
+                type="text"
+                class="link-shortener__input"
+                placeholder="Shorten a link here..."
+                id="shorten-link"
+              />
+              <small class="link-shortener__error-txt">Please add a link</small>
+            </div>
+
+            <button class="button link-shortener__button">Shorten It!</button>
+          </form>
+        </div>
+        <ul class="link-shortener__list"></ul>
+      </div>
+    </div>
+
+    <section class="features">
+      <div class="features-container container">
+        <h2 class="features__title">Advanced Statistics</h2>
+        <p class="features__text">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard
+        </p>
+        <ul class="features__list">
+          <li class="features__element">
+            <div class="features__image-container">
+              <img
+                class="features__image"
+                src="dist/images/icon-brand-recognition.svg"
+                alt=""
+              />
+            </div>
+            <h3 class="features__feature-title">Brand Recognition</h3>
+            <p class="features__feature-details">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </li>
+          <li class="features__element">
+            <div class="features__image-container">
+              <img
+                class="features__image"
+                src="dist/images/icon-detailed-records.svg"
+                alt=""
+              />
+            </div>
+            <h3 class="features__feature-title">Detailed Records</h3>
+            <p class="features__feature-details">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </li>
+          <li class="features__element">
+            <div class="features__image-container">
+              <img
+                class="features__image"
+                src="dist/images/icon-fully-customizable.svg"
+                alt=""
+              />
+            </div>
+            <h3 class="featuers__feature-title">Fully Customizable</h3>
+            <p class="features__feature-details">
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-container container">
+        <h2 class="cta__title">Boost your links today</h2>
+        <a href="#" class="button button--round">Get Started</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <a href="#" class="footer__logo">
+          <svg
+            class="footer__logo-img"
+            xmlns="http://www.w3.org/2000/svg"
+            width="121"
+            height="33"
+          >
+            <title>Shortly - Home page</title>
+            <use href="dist/images/logo.svg#Logo" /></svg
+        ></a>
+
+        <nav class="footer__menu">
+          <div class="footer__list-container">
+            <h3 class="footer__list-title">Features</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Link Sortening</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Branded Links</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Analytics</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list-container">
+            <h3 class="footer__list-title">Resources</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Blog</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Developers</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list-container">
+            <h3 class="footer__list-title">Company</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">About</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Our Team</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials">
+            <a href="#" class="footer__socials-link">
+              <svg
+                class="footer__socials-icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Follow us on Facebook</title>
+                <use
+                  class="footer__icon-img"
+                  href="dist/images/icon-facebook.svg#facebook"
+                />
+              </svg>
+            </a>
+            <a href="#" class="footer__socials-link">
+              <svg
+                class="footer__socials-icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Follow us on Twitter</title>
+                <use
+                  class="footer__icon-img"
+                  href="dist/images/icon-twitter.svg#twitter"
+                /></svg`
+            ></a>
+            <a href="#" class="footer__socials-link">
+              <svg
+                class="footer__socials-icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Follow us on Pintrest</title>
+                <use
+                  class="footer__icon-img"
+                  href="dist/images/icon-pinterest.svg#pinterest"
+                /></svg
+            ></a>
+            <a class="footer__socials-link" href="#">
+              <svg
+                class="footer__socials-icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Follow us on Instagram</title>
+                <use
+                  class="footer__icon-img"
+                  href="dist/images/icon-instagram.svg#instagram"
+                /></svg
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/MieszkoKowalik">Mieszko Kowalik</a>.
+  </div> -->
+
+    <template class="link-shortener__item-template">
+      <li class="link-shortener__item">
+        <span class="link-shortener__message">
+          Shortening your link. Please wait&hellip;
+        </span>
+        <div class="spinner"></div>
+      </li>
+    </template>
+
+    <template class="link-shortener__item-content-template">
+      <span class="link-shortener__url"></span>
+      <a class="link-shortener__url link-shortener__url--short"></a>
+      <button class="button link-shortener__button-item">Copy</button>
+    </template>
+  </body>
+</html>

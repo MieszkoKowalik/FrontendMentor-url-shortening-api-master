@@ -1,0 +1,55 @@
+@use "../utilities/" as *;
+.kv {
+  overflow: hidden;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include breakpoint("md") {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 100px;
+    }
+  }
+  &__img-container {
+    @include breakpoint("md") {
+      order: 1;
+    }
+  }
+  &__img {
+    width: 156.5%;
+    max-width: 733px;
+    aspect-ratio: 512/337;
+
+    @include breakpoint("md") {
+      width: 200%;
+      transform: translateX(-5%);
+    }
+  }
+  &__intro {
+    text-align: center;
+
+    @include breakpoint("md") {
+      text-align: left;
+    }
+  }
+  &__title {
+    font-size: clamp(2.625rem, 5.55vw, 5rem);
+    line-height: 1.15;
+    color: $c-text-dark;
+  }
+  &__text {
+    margin-top: 0.833em;
+    font-size: 1.125rem;
+    line-height: 1.66;
+    color: $c-text-light;
+
+    @include breakpoint("md") {
+      font-size: clamp(1.125rem, 1.53vw, 1.375em);
+    }
+  }
+  &__button {
+    margin-top: 1.77em;
+  }
+}

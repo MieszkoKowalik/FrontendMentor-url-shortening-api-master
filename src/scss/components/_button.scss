@@ -1,0 +1,45 @@
+@use "../utilities/index" as *;
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6em 1.5em;
+
+  color: $c-button-text;
+  background-color: $c-secondary;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  @include breakpoint("md") {
+    font-size: 1.25rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $c-secondary-ligth;
+  }
+  &--round {
+    border-radius: 999px;
+    font-size: 1.25rem;
+  }
+  &--menu {
+    color: $c-text-light;
+    background-color: transparent;
+    font-size: 24px;
+    transition: color 0.2s;
+    @include breakpoint("md") {
+      & {
+        display: none;
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $c-primary;
+    }
+  }
+}

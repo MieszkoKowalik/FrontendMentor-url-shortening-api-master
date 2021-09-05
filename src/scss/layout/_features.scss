@@ -1,0 +1,134 @@
+@use "../utilities/" as *;
+.features {
+  padding-bottom: 80px;
+  background-color: $c-shortener-bg;
+  text-align: center;
+  @include breakpoint("md") {
+    & {
+      padding-bottom: 160px;
+    }
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $c-text-dark;
+    @include breakpoint("md") {
+      font-size: clamp(1.75rem, 2.77vw, 2.5rem);
+    }
+  }
+  &__text {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    line-height: 1.75;
+    color: $c-text-light;
+    @include breakpoint("lg") {
+      font-size: 1.125rem;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 92px;
+
+    margin-top: 5em;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    list-style: none;
+
+    @include breakpoint("x-lg") {
+      & {
+        flex-direction: row;
+        gap: unset;
+        justify-content: space-between;
+        max-width: unset;
+      }
+    }
+
+    &::before {
+      display: block;
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+
+      background-color: $c-secondary;
+
+      @include breakpoint("x-lg") {
+        & {
+          top: 50%;
+          width: 100%;
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    padding: 4em 2em 2em;
+    background-color: #fff;
+    border-radius: 5px;
+
+    @include breakpoint("x-lg") {
+      & {
+        align-items: flex-start;
+        flex-basis: 32%;
+        max-width: 350px;
+        text-align: left;
+      }
+      &:nth-child(2) {
+        transform: translateY(44px);
+      }
+      &:nth-child(3) {
+        transform: translateY(88px);
+      }
+    }
+  }
+  &__feature-title {
+    color: $c-text-dark;
+    font-size: 1.375rem;
+  }
+  &__feature-details {
+    font-size: 0.9375rem;
+    line-height: 1.733;
+    color: $c-text-light;
+  }
+  &__image-container {
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 88px;
+    height: 88px;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background-color: $c-primary;
+    @include breakpoint("x-lg") {
+      & {
+        left: 22%;
+      }
+    }
+  }
+  &__image {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,22 @@
+@use '../utilities' as *;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $ff-primary;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  &.header-scrolled-in {
+    position: relative;
+    top: 74.38px;
+
+    @include breakpoint("md") {
+      top: 105px;
+    }
+  }
+}

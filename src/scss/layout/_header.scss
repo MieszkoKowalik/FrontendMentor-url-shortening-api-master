@@ -1,0 +1,190 @@
+@use "../utilities/" as *;
+@use "../components/overlay" as *;
+.header {
+  position: relative;
+  z-index: 20;
+  background-color: #fff;
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    animation: top-slide-in 0.3s forwards;
+  }
+  &--scroll-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: top-slide-out 0.3s forwards;
+  }
+  &-container {
+    display: flex;
+    padding: 1.2rem 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+
+    @include breakpoint("md") {
+      padding: 2rem 0;
+    }
+  }
+  &__hamburger {
+    @include breakpoint("md") {
+      display: none;
+    }
+  }
+  &__logo {
+    padding-top: 3px;
+    line-height: 0;
+  }
+  &__logo-img {
+    fill: $c-text-dark;
+  }
+  &__menu {
+    @include breakpoint("md") {
+      & {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__menu-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    position: absolute;
+    z-index: 20;
+    top: 84px;
+    left: -100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 1em;
+    transform: translateX(-50%);
+    background-color: $c-primary;
+    opacity: 0;
+    border-radius: 10px;
+
+    transition: opacity ease 0.2s, left ease 0.2s;
+
+    &--active {
+      left: 50%;
+      opacity: 1;
+    }
+
+    @media (orientation: landscape) {
+      gap: 15px;
+    }
+
+    @include breakpoint("md") {
+      & {
+        position: unset;
+        top: unset;
+        transform: unset;
+        width: unset;
+        padding: unset;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: transparent;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+
+    text-align: center;
+    list-style: none;
+
+    @media (orientation: landscape) {
+      gap: 10px;
+    }
+
+    @include breakpoint("md") {
+      & {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+    &:nth-of-type(2):before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $c-text-light;
+      opacity: 25%;
+
+      @media (orientation: landscape) {
+        display: none;
+      }
+
+      @include breakpoint("md") {
+        display: none;
+      }
+    }
+  }
+  &__menu-item {
+    height: 100%;
+  }
+  &__menu-button {
+    width: 100%;
+    font-size: 1.125rem;
+    @include breakpoint("md") {
+      & {
+        font-size: 0.9375rem;
+      }
+    }
+  }
+  &__menu-link {
+    display: block;
+    height: 100%;
+
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $c-button-text;
+    @include breakpoint("md") {
+      & {
+        font-size: 0.9375rem;
+        color: $c-text-light;
+
+        &:hover {
+          color: $c-primary;
+        }
+      }
+    }
+  }
+}
+
+@keyframes top-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes top-slide-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}

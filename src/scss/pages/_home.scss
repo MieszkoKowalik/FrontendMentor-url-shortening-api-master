@@ -1,0 +1,18 @@
+@use '../utilities/index' as *;
+@use "../components/button";
+@use "../components/hamburger";
+@use '../components/spinner';
+@use "../layout/link-shortener";
+
+@use "../layout/header";
+@use "../layout/keyVisual";
+@use '../layout/features';
+@use "../layout/cta";
+@use "../layout/footer";
+.container {
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1110px;
+  min-width: 270px;
+}
