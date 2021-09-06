@@ -682,6 +682,7 @@ body.header-scrolled-in {
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: -0.025em;
   color: #33303b;
 }
 @media (min-width: 769px) {
@@ -695,6 +696,7 @@ body.header-scrolled-in {
   margin-right: auto;
   margin-top: 1em;
   line-height: 1.75;
+  letter-spacing: 0.00666em;
   color: #9d99a8;
 }
 @media (min-width: 1025px) {
