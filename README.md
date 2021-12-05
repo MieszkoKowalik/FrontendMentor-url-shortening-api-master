@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site Preview](https://mieszkokowalik.github.io/FrontendMentor-url-shortening-api-master/)
+- [Live Site Preview](https://mieszkokowalik.github.io/url-shortening-api-master/)
 
 ## My process
 
